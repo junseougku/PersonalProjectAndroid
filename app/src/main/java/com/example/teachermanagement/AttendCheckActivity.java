@@ -44,7 +44,6 @@ public class AttendCheckActivity extends AppCompatActivity {
             TextView name = (TextView) rowView.findViewById(R.id.name);
             TextView age = (TextView) rowView.findViewById(R.id.age);
             name.setText(studentNameList[position]);
-
             return rowView;
         }
     }
