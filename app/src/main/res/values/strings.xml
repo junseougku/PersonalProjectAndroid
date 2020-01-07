@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TeacherManagement</string>
+    <string name="subject">과목</string>
+    <string name="email_prompt">선택</string>
+    <string-array name = "emailaddress_array">
+        <item>naver.com</item>
+        <item>daum.net</item>
+        <item>gmail.com</item>
+
+    </string-array>
 </resources>

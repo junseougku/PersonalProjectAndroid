@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="삭제할 과목 선택"
+        android:textSize="25dp" />
+
+    <Spinner
+        android:id="@+id/SubjectSpinner"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.5"
+        android:prompt="@string/subject">
+
+    </Spinner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text ="삭제"
+            android:id = "@+id/RemoveButton"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text = "취소"
+            android:id="@+id/CancelButton"/>
+    </LinearLayout>
+
+</LinearLayout>
