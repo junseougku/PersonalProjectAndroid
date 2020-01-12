@@ -191,12 +191,13 @@
             android:text = "특이사항"
             android:textSize="10pt"/>
         <EditText
+            android:id = "@+id/IssueEditText"
             android:inputType="textMultiLine"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:lines = "1"
             android:maxLines="3"
-            android:scrollbars="vertical"/>
+            android:scrollbars="vertical" />
 
     </LinearLayout>
     <LinearLayout
@@ -209,13 +210,15 @@
             android:layout_height="40pt"
             android:text = "등록"
             android:textSize="10pt"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.5"
+            android:onClick="onClick_Resister"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="40pt"
             android:layout_weight="0.5"
             android:text="취소"
-            android:textSize="10pt"/>
+            android:textSize="10pt"
+            android:onClick="onClick_Cancel"/>
     </LinearLayout>
 
 </LinearLayout>
