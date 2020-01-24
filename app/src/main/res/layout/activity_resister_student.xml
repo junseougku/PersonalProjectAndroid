@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id = "@+id/ResisterView">
+<LinearLayout
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,6 +15,7 @@
         android:text = "신규학생등록"
         android:textSize="15pt"
         android:textStyle="italic"
+        android:id = "@+id/TitleText"
         />
 
     <LinearLayout
@@ -24,12 +29,13 @@
             android:text="이름 : "
             android:textSize="10pt" />
 
-        <EditText
+        <com.example.teachermanagement.CustomEditText
             android:id="@+id/NameEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="이름"
-            android:inputType="text" />
+            android:inputType="text"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -43,7 +49,7 @@
             android:text="나이 : "
             android:textSize="10pt" />
 
-        <EditText
+        <com.example.teachermanagement.CustomEditText
             android:id="@+id/AgeEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -61,7 +67,7 @@
             android:text="학교 : "
             android:textSize="10pt" />
 
-        <EditText
+        <com.example.teachermanagement.CustomEditText
             android:id="@+id/SchoolEditText"
             android:layout_width="240dp"
             android:layout_height="match_parent"
@@ -113,7 +119,7 @@
             android:text="전화번호 : "
             android:textSize="10pt" />
 
-        <EditText
+        <com.example.teachermanagement.CustomEditText
             android:id="@+id/PhoneNumberEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -131,7 +137,7 @@
             android:text="이메일 : "
             android:textSize="10pt" />
 
-        <EditText
+        <com.example.teachermanagement.CustomEditText
             android:id="@+id/EmailEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -158,12 +164,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="수강 과목 : "
+            android:text="수강과목 : "
             android:textSize="10pt" />
 
         <Spinner
             android:id="@+id/SubjectSpinner"
-            android:layout_width="130dp"
+            android:layout_width="118dp"
             android:layout_height="match_parent"
             android:prompt="@string/subject" />
 
@@ -190,7 +196,7 @@
             android:layout_height="wrap_content"
             android:text = "특이사항"
             android:textSize="10pt"/>
-        <EditText
+        <com.example.teachermanagement.CustomEditText
             android:id = "@+id/IssueEditText"
             android:inputType="textMultiLine"
             android:layout_width="fill_parent"
@@ -222,3 +228,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>

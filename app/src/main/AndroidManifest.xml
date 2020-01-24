@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--android:windowSoftInputMode="adjustResize" 에딧텍스트에 키보드 바로위에 화면조정-->
+
         <activity android:name=".ResisterStudentActivity"></activity>
         <activity android:name=".AttendCheckActivity" />
         <activity android:name=".MainActivity">

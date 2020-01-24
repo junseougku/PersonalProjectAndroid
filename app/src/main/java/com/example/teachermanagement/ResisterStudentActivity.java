@@ -11,7 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +31,11 @@ public class ResisterStudentActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resister_student);
+
+        //텍스트뷰에 포커스 // 액티비티 진입시 키보드 뜨는거 방지
+        TextView title = (TextView)findViewById(R.id.TitleText);
+        title.setFocusableInTouchMode(true);
+        title.requestFocus();
 
         //과목 추가 초기화
         Spinner subjectSpinner = (Spinner) findViewById(R.id.SubjectSpinner);
@@ -119,7 +126,6 @@ public class ResisterStudentActivity extends AppCompatActivity
         editor.putInt("newStudentSubject",spinnerValue.getSelectedItemPosition());
         fieldValue = (EditText)findViewById(R.id.IssueEditText);
         editor.putString("newStudentIssue",fieldValue.getText().toString());
-
 
         editor.commit();
     }
@@ -219,18 +225,37 @@ public class ResisterStudentActivity extends AppCompatActivity
 
         super.onBackPressed();
 
+        //실제 등록하면 프레퍼런스 전부 비움
         EditText fieldValue = (EditText)findViewById(R.id.NameEditText);
         fieldValue.setText(null);
-
         fieldValue = (EditText)findViewById(R.id.AgeEditText);
+        fieldValue.setText(null);
+        fieldValue = (EditText)findViewById(R.id.SchoolEditText);
+        fieldValue.setText(null);
+        fieldValue = (EditText)findViewById(R.id.PhoneNumberEditText);
+        fieldValue.setText(null);
+        fieldValue = (EditText)findViewById(R.id.EmailEditText);
+        fieldValue.setText(null);
+        fieldValue = (EditText)findViewById(R.id.IssueEditText);
         fieldValue.setText(null);
     }
 
-    public void ShowEditTextXMark()
+    //자신의 스크롤뷰를 반환
+    public ScrollView GetScrollView()
     {
-        //Drawable tempDrawable = ContextCompat.getDrawable(getContext(), R.drawable.abc_ic_clear_mtrl_alpha);
+        ScrollView sv = (ScrollView)findViewById(R.id.ResisterView);
+        return sv;
     }
+
+
+
+
+
+
+
 }
+
+
 
 
 
